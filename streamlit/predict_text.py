@@ -100,7 +100,7 @@ def bert_predict(model, test_dataloader):
 
     return probs
 
-def predict_text(user_input):
+def predict(user_input):
     """Takes in a string and return the sentiment classification of that string
     """
     user_text = np.array(user_input)
