@@ -13,6 +13,6 @@ st.write(desc)
 user_input = st.text_input("Input your text here")
 
 if st.button("Predict"):
-    prediction = predict_text.predict(user_input)
+    prediction = predict_text(user_input)
     st.write(prediction)
 

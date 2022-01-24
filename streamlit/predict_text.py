@@ -117,4 +117,5 @@ def predict_text(user_input):
 
     # Get predictions from the probabilities
     threshold = 0.9
-    preds = np.where(probs[:, 1] > threshold, 1, 0)
+    preds = np.where(probs[:, 1] > threshold, "Negative", "Positive").values
+    return preds
