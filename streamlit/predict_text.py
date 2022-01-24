@@ -111,7 +111,7 @@ def predict(user_input):
     test_dataloader = DataLoader(test_dataset, sampler=test_sampler, batch_size=32)
     
     # Load model
-    bert_classifier = torch.load("trained_model/bert_sg_small.pth")
+    bert_classifier = torch.load("bert_sg_small.pth")
     # Compute predicted probabilities on the test set
     probs = bert_predict(bert_classifier, test_dataloader)
 
