@@ -5,6 +5,7 @@ import torch
 from transformers import BertTokenizer
 from torch.utils.data import TensorDataset, DataLoader, SequentialSampler
 import torch.nn.functional as F
+import BertClassifier
 
 if torch.cuda.is_available():       
     device = torch.device("cuda")
