@@ -103,7 +103,7 @@ def bert_predict(model, test_dataloader):
 def predict(user_input):
     """Takes in a string and return the sentiment classification of that string
     """
-    user_text = np.array(user_input)
+    user_text = np.array(user_input).reshape(-1)
     test_inputs, test_masks = preprocessing_for_bert(user_text)
     # Create the DataLoader for our test set
     test_dataset = TensorDataset(test_inputs, test_masks)
